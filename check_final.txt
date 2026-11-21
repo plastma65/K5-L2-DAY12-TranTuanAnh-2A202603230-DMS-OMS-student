@@ -1,0 +1,10 @@
+File: export_final.zip
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=10, face=8, face13=4, hand=12, infant_seat=10, object=10, person=10, phone=1
+Kết quả: 0 lỗi, 0 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+Ghi chú (GUIDE 4.5, 4.8):
+- BTC cập nhật nhãn (21/11): child_seat.occupied thêm giá trị yes; đã sửa labels_cabin_v1.json và scripts/cabin_schema.py tương ứng. S02 và S03 rear_middle: thấy rõ trong ghế trẻ em có người/vật -> occupied=yes.
+- D01, D03: không thấy mắt lẫn mũi (D01 quay đi, D03 nghiêng hẳn) -> không vẽ face/face13 theo 4.5.
+- D02, D06 gaze_zone=other: hai mắt nhắm, không xác định được hướng nhìn (4.5).
+- D05 gaze_zone=other: mắt trái nhắm, mắt phải khuất (unknown), không xác định được hướng nhìn (4.5).
+- Ghế trống (4.8), áp cho cả _rgb và _ir: S01: 1 (rear_middle) · S02: 1 (rear_left) · S03: 0 · S04: 2 (rear_middle, rear_left) · S05: 1 (rear_middle) · S06: 2 · S07: 2 · S08: 1 (rear_middle).
