@@ -1,0 +1,10 @@
+File: export_final_v2.zip
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=10, face=17, face13=4, hand=12, infant_seat=10, object=6, person=18, phone=1
+Kết quả: 0 lỗi, 0 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+Ghi chú sau review chéo với Doãn Tùng Lâm (GUIDE 4.5, 4.6, 4.8):
+- BTC cập nhật nhãn (21/11): child_seat.occupied thêm giá trị yes; đã sửa labels_cabin_v1.json và scripts/cabin_schema.py tương ứng.
+- S02, S03, S05, S07: trẻ ngồi trong child_seat/infant_seat -> vẽ person + face theo xác nhận của coach (GUIDE 3 chưa cập nhật). child_seat có trẻ -> occupied=yes.
+- D01, D03: có box face sau khi xem lại cùng peer, nhưng không vẽ face13 vì không thấy rõ mắt, mũi, miệng để đặt điểm.
+- D06: 5 điểm mũi-miệng bị ly che, không đoán được vị trí -> outside (4.6).
+- Ghế trống (4.8), áp cho cả _rgb và _ir: S01: 0 · S02: 1 (rear_left) · S03: 0 · S04: 2 (rear_middle, rear_left) · S05: 1 (rear_middle) · S06: 2 · S07: 2 · S08: 1 (rear_middle).

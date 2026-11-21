@@ -8,10 +8,10 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 
 | Ảnh | Đối tượng | Loại lỗi | Ghi chú | Đã sửa? |
 |---|---|---|---|---|
-| S01_rgb, S01_ir | `hand` ×2 mỗi ảnh; `child_seat` rear_right | `extra`; `guess` | Vẽ tay hành khách trên ảnh SVIRO, nhưng `hand` chỉ dùng cho DMS (GUIDE 4.1, 4.3). Ghế trẻ em bị vải caro phủ mà ghi `occupied = no`, phải là `unknown` (4.4-1) | Có: xóa 4 box `hand`, đổi `occupied = unknown` |
+| S01_rgb, S01_ir | `hand` ×2 mỗi ảnh; box `face`; cốc rear_middle | `extra`; `box`; `missing` | Vẽ tay hành khách trên ảnh SVIRO, nhưng `hand` chỉ dùng cho DMS (GUIDE 4.1, 4.3). Box `face` ôm cả tóc (4.1). Bỏ sót cốc ở rear_middle (4.8), review chéo mới phát hiện | Có: xóa 4 box `hand`; v2 vẽ lại `face` từ trán, thêm `object` cup, `occupied = no` |
 | S04_rgb, S04_ir | `hand` ×2 mỗi ảnh; `person.seatbelt`, `face.glasses` | `extra`; `ok` sau khi sửa | Lại vẽ `hand` trên SVIRO. `seatbelt` và `glasses` ghi `unknown` dù thấy rõ không thắt dây, không đeo kính, phải ghi `not_worn` / `none` (4.5, 4.7) | Có: xóa 4 box `hand`, đổi `not_worn` / `none` |
 | D05 | `face13` mắt trái | `box` (vị trí điểm) | Khung 13 điểm CVAT đặt dựng đứng; 4 điểm mắt trái còn theo kiểu mặt nhìn thẳng (mí trên/dưới lệch theo y) trên ảnh xoay 90°. Trái/phải đúng: mắt trái có y lớn hơn | Chưa: xem lại trên ảnh nhưng không chắc vị trí mép mí, giữ nguyên để không đoán (4.6) |
-| D06 | `object` (ly nước) | `extra` | Vẽ ly tài xế đang uống thành `object`, nhưng DMS không vẽ chai, cốc trên tay (4.2). Điểm mũi-miệng bị ly che đã có cờ `occluded` | Có: xóa box `object` |
+| D06 | `object` (ly nước) | `extra` | Vẽ ly tài xế đang uống thành `object`, nhưng DMS không vẽ chai, cốc trên tay (4.2). Điểm mũi-miệng bị ly che ban đầu đặt `occluded` dù không đoán được vị trí | Có: xóa box `object`; v2 đổi 5 điểm sang `outside` |
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
@@ -23,4 +23,4 @@ Lần sau tránh bằng cách: Trước khi vẽ mỗi box, hỏi "nhãn này c�
 
 ## 3. Ghi chú về disagreement_log
 
-Một dòng bạn của mình đúng và mình sai. Mình học được gì từ dòng đó: (điền sau review chéo)
+Một dòng bạn của mình đúng và mình sai. S01/S04 `face`: Lâm vẽ box từ trán đến cằm, mình vẽ bao cả đầu (mép trên lệch khoảng 70 px). Guideline 4.1 ghi rõ "không gồm tóc phía trên". Mình học được: đọc kỹ định nghĩa hình của từng nhãn trước khi vẽ, và box "đủ" không có nghĩa là "to"; hộp phải sát đúng phần được định nghĩa (4.4-5).

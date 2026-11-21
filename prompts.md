@@ -17,3 +17,4 @@ Bài làm cá nhân, sau đó review chéo với một bạn cùng mã G10. Khô
 | 11 | Claude | Soạn bản khai báo `prompts.md` này | Đọc lại, sửa cho đúng những gì đã làm | Có: đối chiếu từng lần hỏi trong buổi |
 | 12 | Claude | Lập playbook và thư mục ghi chú lệnh cá nhân (không nộp) | Dùng để theo dõi các bước và lệnh | Không áp dụng (tài liệu cá nhân) |
 | 13 | Claude | Soạn `self_review.md` từ các lỗi đã sửa trong bài | Mình tự chọn lỗi lặp lại (gán nhãn sai phần); Claude soạn câu chữ; mình đọc lại | Có: đối chiếu XML trước/sau khi sửa và GUIDE 4.1, 4.2 |
+| 14 | Claude | Gom 66 dòng `diff` với bản của Lâm thành nhóm, gợi ý mục guideline; điền `disagreement_log.csv` theo kết luận cuối (sau khi hai bạn xem ảnh và hỏi coach); đồng bộ `ir_log`, `class_list_v0`, `self_review`, soạn `TEAM.md` | Verdict do mình và Lâm chốt trên CVAT, ca trẻ trong ghế do coach xác nhận; Claude chỉ ghi lại vào file | Có: đối chiếu XML `export_final_v2.zip` với từng dòng CSV |

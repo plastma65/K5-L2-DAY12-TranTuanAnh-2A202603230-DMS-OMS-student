@@ -1,5 +1,5 @@
 ﻿frame_id,source,phenomenon,affected_field,effect_on_label
-S01_ir,IR_sim,"Ghế trẻ em phủ vải sọc caro: IR-sim mất màu nhưng hoa văn sọc vẫn hiện rõ, nhận ra ghế nhờ hình dạng và vân vải (4.4-4)","child_seat; child_seat.occupied","vẫn gán child_seat seat=rear_right; vải che bên trong nên occupied=unknown như ảnh RGB"
+S01_ir,IR_sim,"Ghế trẻ em phủ vải sọc caro: IR-sim mất màu nhưng hoa văn sọc vẫn hiện rõ, nhận ra ghế nhờ hình dạng và vân vải (4.4-4)","child_seat; child_seat.occupied","vẫn gán child_seat seat=rear_right; thấy lòng ghế trống nên occupied=no như ảnh RGB"
 S04_ir,IR_sim,"Người ghế rear_right: IR-sim vẫn đủ tương phản để thấy không có dây chéo qua vai và không đeo kính","person.seatbelt; face.glasses","ghi not_worn và none như RGB; IR-sim không làm mất hai trường này ở cảnh này"
 D02,real_IR,"Ảnh NIR có đèn chiếu chủ động, không cần ánh sáng thường: mí hai mắt khép thấy rõ","eye_left; eye_right","ghi closed cho từng mắt; closed mô tả khung này, không suy ra tài xế đang ngủ (4.5)"
-D06,real_IR,"Trên ảnh NIR, ly nước và tay che vùng mũi-miệng khi tài xế uống; mí mắt khép vẫn thấy rõ","face13 (nose_tip, mouth_*, lip_*); eye_left; eye_right","5 điểm mũi-miệng bật occluded; mắt ghi closed; không vẽ object cho ly (4.2)"
+D06,real_IR,"Trên ảnh NIR, ly nước và tay che vùng mũi-miệng khi tài xế uống; khe mắt vẫn thấy","face13 (nose_tip, mouth_*, lip_*); eye_left; eye_right","5 điểm mũi-miệng đặt outside (không đoán được vị trí); mắt ghi open; không vẽ object cho ly (4.2)"
